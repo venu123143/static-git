@@ -1,0 +1,45 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif, 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS';
+}
+
+.button {
+    height: 50px;
+    width: 120px;
+    margin: 100px;
+    color: black;
+    border: 1px solid #00abf0;
+    border: none;
+    border-radius: 6px;
+    background: #00abf0;
+    font-size: 1rem;
+    font-weight: 500;
+    letter-spacing: .1rem;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    cursor: pointer;
+    /* transition: .5s; */
+}
+
+.button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: linear-gradient(93.87deg, #095ae6, #062794);
+    z-index: -1;
+    transition:  .5s;
+}
+
+.button:hover {
+    color: white;
+}
+
+.button:hover::before {
+    width: 100%;
+}
